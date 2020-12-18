@@ -1,11 +1,11 @@
 {
-  "name": "ion-tk-social-network",
-  "version": "0.2.0",
-  "description": "Ionic social network starter",
+  "name": "uis-ibnu-sina-social-network",
+  "version": "0.0.1",
+  "description": "SOCIAL NETWORK",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "start": "ionic serve",
+    "build": "ionic build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -17,15 +17,12 @@
     "ionic social network",
     "social network"
   ],
-  "author": "Naim",
+  "author": "Irvan",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/thenaim/ion-tk-social-network/issues"
-  },
-  "homepage": "https://github.com/thenaim/ion-tk-social-network#readme",
+  "homepage": "https://github.com/irfanArdiansyah/ionic-social-network#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thenaim/ion-tk-social-network.git"
+    "url": "git+https://github.com/irfanArdiansyah/ionic-social-network.git"
   },
   "private": true,
   "dependencies": {
