@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MenuController } from '@ionic/angular';
 import { SubscriptionLike } from 'rxjs';
 import { AppEventsService } from '../../services/app-events/app-events.service';
@@ -11,11 +11,10 @@ import { FakerService } from '../../services/faker/faker.service';
 })
 export class ProfilePage implements OnInit {
   user = {
-    full_name: '',
-    nickname: '',
-    image: '',
+    full_name: 'Mohd Irvan Ardiansyah',
+    nickname: 'Irvan',
     status: '',
-    online: false,
+    online: true,
     isMobileOnline: true
   };
 
@@ -39,14 +38,14 @@ export class ProfilePage implements OnInit {
   }
 
   getUser() {
-    this.fakerService.getFaker().then((faker) => {
-      this.user.full_name = faker.name.findName();
-      this.user.image = faker.internet.avatar();
-      this.user.status = faker.lorem.word();
-      this.user.online = faker.random.boolean();
-      this.user.isMobileOnline = faker.random.boolean();
-      this.user.nickname = this.user.full_name.toLocaleLowerCase().split(' ').join('_');
-    });
+    // this.fakerService.getFaker().then((faker) => {
+    //   this.user.full_name = faker.name.findName();
+    //   this.user.image = faker.internet.avatar();
+    //   this.user.status = faker.lorem.word();
+    //   this.user.online = faker.random.boolean();
+    //   this.user.isMobileOnline = faker.random.boolean();
+    //   this.user.nickname = this.user.full_name.toLocaleLowerCase().split(' ').join('_');
+    // });
   }
   ngOnInit(): void {
     this.getUser();

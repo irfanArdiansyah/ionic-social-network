@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Config } from '@ionic/angular';
 
@@ -39,18 +39,7 @@ export class MessagePage implements OnInit {
    * Data init
    */
   async dataInit() {
-    this.fakerService.getFaker().then((faker) => {
-      this.messagesList = Array.apply(null, Array(25)).map(() => {
-        return {
-          id: faker.random.uuid(),
-          first_name: faker.name.findName().split(' ')[0],
-          last_name: faker.name.lastName(),
-          email: faker.internet.email(),
-          image: faker.internet.avatar(),
-          last_message: faker.lorem.sentence()
-        };
-      });
-    });
+    this.messagesList = await this.appData.getMessages()
   }
 
   ngOnInit(): void {

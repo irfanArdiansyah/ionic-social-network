@@ -98,7 +98,7 @@ export class MessageDetailPage implements OnInit, OnDestroy {
       // generate answer
       for (let i = 0; i < faker.random.arrayElement([1, 2, 3]); i++) {
         this.chats[this.chats.length - 1].chats.push({
-          message: faker.lorem.sentences(faker.random.arrayElement([1, 2, 3])),
+          message: faker.random.words(faker.random.arrayElement([1, 2, 3])),
           date: faker.date.recent(),
           first_name: faker.name.findName().split(' ')[0],
           last_name: faker.name.lastName(),
@@ -125,7 +125,7 @@ export class MessageDetailPage implements OnInit, OnDestroy {
 
         chat.chats = Array.apply(null, Array(5)).map(() => {
           return {
-            message: faker.lorem.sentences(faker.random.arrayElement([1, 2, 3])),
+            message: faker.random.words(faker.random.arrayElement([1, 2, 3])),
             date: faker.date.recent(),
             first_name: faker.name.findName().split(' ')[0],
             last_name: faker.name.lastName(),

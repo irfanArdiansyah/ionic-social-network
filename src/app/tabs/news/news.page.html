@@ -44,7 +44,7 @@
     <ion-card class="post-card" *ngIf="stories.length">
       <ion-item lines="none" class="post-item">
         <ion-avatar slot="start">
-          <ion-img [src]="stories[0].avatar"></ion-img>
+          <ion-img src="./assets/images/irfan.jpeg"></ion-img>
         </ion-avatar>
         <ion-button class="post-some" color="light">
           <span class="post-some-title">{{'whats_new' | translate}}</span>
@@ -66,7 +66,7 @@
         routerdirection="forward">
         <ion-item lines="none" class="story-item">
           <ion-avatar class="story-avatar" [ngClass]="{'seen': false}">
-            <img [src]="story.avatar">
+            <img [src]="story.image">
           </ion-avatar>
         </ion-item>
         <div class="story-author">

@@ -12,7 +12,7 @@ export class FakerService {
 
   async setLang(lang: AppLanguage) {
     this.lang = lang;
-    faker.setLocale(lang);
+    faker.setLocale('en');
   }
 
   getFaker() {

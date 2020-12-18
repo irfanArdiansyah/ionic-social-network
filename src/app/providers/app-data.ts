@@ -67,6 +67,12 @@ export class AppData {
         });
     }
 
+    async getMessages() {
+        return this.load().then((data) => {
+            return data.messages;
+        });
+    }
+
     async getMessagesUser(id: number) {
         this.load().then((data) => {
             const res = data.messagesUser.find(mes => mes.id === id);
